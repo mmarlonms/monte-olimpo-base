@@ -11,8 +11,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="3.2.1" />
-    <PackageReference Include="MonteOlimpo.Extensions" Version="1.0.0" />
-    <PackageReference Include="MonteOlimpo.Filters" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 

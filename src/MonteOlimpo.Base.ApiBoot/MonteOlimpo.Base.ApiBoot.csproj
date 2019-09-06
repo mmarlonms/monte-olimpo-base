@@ -19,11 +19,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.6" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-    <PackageReference Include="MonteOlimpo.Exception" Version="1.0.0" />
-    <PackageReference Include="MonteOlimpo.Extensions" Version="1.0.0" />
-    <PackageReference Include="MonteOlimpo.Filters" Version="1.0.0" />
-    <PackageReference Include="MonteOlimpo.Log" Version="1.0.0" />
-    <PackageReference Include="MonteOlimpo.Swagger" Version="1.0.1" />
+    <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.Log" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.Swagger" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

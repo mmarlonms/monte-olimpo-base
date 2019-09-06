@@ -7,8 +7,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
-    <PackageReference Include="MonteOlimpo.CoreException" Version="1.0.1" />
-    <PackageReference Include="MonteOlimpo.ExceptionHandler.Abstractions" Version="1.0.0" />
+    <PackageReference Include="MonteOlimpo.Base.CoreException" Version="1.0.1" />
+    <PackageReference Include="MonteOlimpo.Base.ExceptionHandler.Abstractions" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
