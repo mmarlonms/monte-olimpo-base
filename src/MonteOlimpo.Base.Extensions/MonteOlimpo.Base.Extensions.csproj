@@ -6,12 +6,12 @@
     <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
     <Description>Pacote de Extensoes , Configuration, Service entre outras.</Description>
-    <PackageIconUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageIconUrl>
-    <PackageProjectUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

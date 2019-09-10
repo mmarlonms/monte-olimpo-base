@@ -23,17 +23,16 @@ variables:
   #Extensions.Configuration
   #Swagger
   #ApiBoot
-  Pack1Version: '1.0.3'
+
+  Pack1Version: '1.0.4'
   Pack1PushToNuget: true
 
   Pack2PushVersion: '1.0.2'
   Pack2PushToNuget: false
-
   
   Pack3PushVersion: '1.0.2'
   Pack3PushToNuget: False
 
-  
   Pack4PushVersion: '1.0.2'
   Pack4PushToNuget: false
 
@@ -127,23 +126,23 @@ steps:
     packagesToPush: '$(build.artifactStagingDirectory)/MonteOlimpo.Base.CoreException.*.nupkg'
     publishFeedCredentials: NuggetConnect
 
-    # Publish MonteOlimpo.ExceptionHandler.Abstraction to NuGet.org
+    # Publish MonteOlimpo.ExceptionHandler.Abstractions to NuGet.org
 - task: DotNetCoreCLI@2
-  displayName: Pack MonteOlimpo.Base.ExceptionHandler.Abstraction
+  displayName: Pack MonteOlimpo.Base.ExceptionHandler.Abstractions
   condition: eq(variables['Pack1PushToNuget'], 'True')
   inputs:
     command: pack
-    packagesToPack: '**/**/MonteOlimpo.Base.ExceptionHandler.Abstraction.csproj'
+    packagesToPack: '**/**/MonteOlimpo.Base.ExceptionHandler.Abstractions.csproj'
     versioningScheme: byEnvVar
     versionEnvVar: Pack1Version
 - task: NuGetCommand@2
-  displayName: Push MonteOlimpo.Base.ExceptionHandler.Abstraction to NuGet.org
+  displayName: Push MonteOlimpo.Base.ExceptionHandler.Abstractions to NuGet.org
   condition: eq(variables['Pack1PushToNuget'], 'True')
   continueOnError: True
   inputs:
     command: push
     nuGetFeedType: external
-    packagesToPush: '$(build.artifactStagingDirectory)/MonteOlimpo.Base.ExceptionHandler.Abstraction.*.nupkg'
+    packagesToPush: '$(build.artifactStagingDirectory)/MonteOlimpo.Base.ExceptionHandler.Abstractions.*.nupkg'
     publishFeedCredentials: NuggetConnect
 
     # Publish MonteOlimpo.Extensions to NuGet.org
