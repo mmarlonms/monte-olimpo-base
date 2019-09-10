@@ -6,6 +6,12 @@
 # MonteOlimpo - [Projeto em Desenvolvimento]
 Suite de serviços para desenvolvimentos de API's baseados em uma arquitetura exagonal.
 
+O intúito desse projeto é facilitar na criação de apis fornecendo uma configuração padrão. 
+
+Monte Olimpo Base fornece uma suite de pacotes voltadas para questões de infra estrtura e serviços básicos como Ioc de logs, tratamento de exceções e swagger por exempo.
+
+Mapa de Dependência 
+![DependencyMap](https://github.com/mmarlonms/monte-olimpo-base/blob/master/docs/monte-olimpo-base-dependecy-map.png)
 
 ## Nuget details
 |Packages|Version & Downloads|
