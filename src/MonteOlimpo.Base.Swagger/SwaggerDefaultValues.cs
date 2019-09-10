@@ -2,7 +2,7 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 
-namespace MonteOlimpo.Crosscutting.Swagger
+namespace MonteOlimpo.Base.Crosscutting.Swagger
 {
     internal class SwaggerDefaultValues : IOperationFilter
     {

@@ -4,11 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/mmarlonms/MonteOlimpo/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>Marlon Miranda da Silva</Copyright>
-    <RepositoryUrl>https://github.com/mmarlonms/MonteOlimpo</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

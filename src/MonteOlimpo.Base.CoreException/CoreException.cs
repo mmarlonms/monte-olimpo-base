@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace MonteOlimpo.CoreException
+namespace MonteOlimpo.Base.CoreException
 {
     public abstract class CoreException : Exception
     {

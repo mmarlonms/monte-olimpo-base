@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MonteOlimpo.Extensions.Service;
-using MonteOlimpo.Filters.Exceptions;
+using MonteOlimpo.Base.Extensions.Service;
+using MonteOlimpo.Base.Filters.Exceptions;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace MonteOlimpo.ApiBoot
+namespace MonteOlimpo.Base.ApiBoot
 {
     public abstract class MonteOlimpoBootStrap
     {

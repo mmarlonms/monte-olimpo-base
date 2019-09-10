@@ -1,5 +1,5 @@
-﻿using MonteOlimpo.ExceptionHandler;
-using MonteOlimpo.ExceptionHandler.Abstractions;
+﻿using MonteOlimpo.Base.ExceptionHandler;
+using MonteOlimpo.Base.ExceptionHandler.Abstractions;
 using System;
 
 namespace Microsoft.Extensions.DependencyInjection

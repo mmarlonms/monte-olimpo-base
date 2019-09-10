@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace MonteOlimpo.ExceptionHandler.Abstractions
+namespace MonteOlimpo.Base.ExceptionHandler.Abstractions
 {
     public interface IExceptionHandler
     {

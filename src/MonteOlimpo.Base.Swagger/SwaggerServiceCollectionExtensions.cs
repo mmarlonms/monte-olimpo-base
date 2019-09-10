@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
-using MonteOlimpo.Crosscutting.Swagger;
-using MonteOlimpo.Extensions.Configuration;
-using MonteOlimpo.Filters.Swagger;
+using MonteOlimpo.Base.Crosscutting.Swagger;
+using MonteOlimpo.Base.Extensions.Configuration;
+using MonteOlimpo.Base.Filters.Swagger;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;

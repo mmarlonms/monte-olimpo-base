@@ -1,11 +1,11 @@
-﻿using MonteOlimpo.CoreException;
+﻿using MonteOlimpo.Base.CoreException;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MonteOlimpo.Filters.Swagger
+namespace MonteOlimpo.Base.Filters.Swagger
 {
     public class SwaggerExcludeFilter : ISchemaFilter
     {

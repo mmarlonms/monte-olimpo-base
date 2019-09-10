@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MonteOlimpo.CoreException
+namespace MonteOlimpo.Base.CoreException
 {
     public  class InternalError
     {

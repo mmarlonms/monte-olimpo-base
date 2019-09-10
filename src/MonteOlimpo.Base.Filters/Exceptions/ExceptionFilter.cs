@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using MonteOlimpo.ExceptionHandler.Abstractions;
+using MonteOlimpo.Base.ExceptionHandler.Abstractions;
 using System;
 
-namespace MonteOlimpo.Filters.Exceptions
+namespace MonteOlimpo.Base.Filters.Exceptions
 { 
     public class ExceptionFilter : IExceptionFilter
     {

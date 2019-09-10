@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MonteOlimpo.Crosscutting.Swagger
+namespace MonteOlimpo.Base.Crosscutting.Swagger
 {
     public class SwaggerConfiguration
     {

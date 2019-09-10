@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using MonteOlimpo.CoreException;
-using MonteOlimpo.ExceptionHandler.Abstractions;
+using MonteOlimpo.Base.CoreException;
+using MonteOlimpo.Base.ExceptionHandler.Abstractions;
 using Newtonsoft.Json;
 using System;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonteOlimpo.ExceptionHandler
+namespace MonteOlimpo.Base.ExceptionHandler
 {
     public class ExceptionHandler : IExceptionHandler
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace MonteOlimpo.ExceptionHandler
+namespace MonteOlimpo.Base.ExceptionHandler
 {
     internal class JsonContractResolverForCoreException : CamelCasePropertyNamesContractResolver
     {

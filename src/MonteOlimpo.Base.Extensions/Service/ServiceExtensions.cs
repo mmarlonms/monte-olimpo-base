@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace MonteOlimpo.Extensions.Service
+namespace MonteOlimpo.Base.Extensions.Service
 {
     public static class ServiceExtensions
     {

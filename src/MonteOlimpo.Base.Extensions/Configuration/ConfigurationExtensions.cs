@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 
-namespace MonteOlimpo.Extensions.Configuration
+namespace MonteOlimpo.Base.Extensions.Configuration
 {
     public static class ConfigurationExtensions
     {
