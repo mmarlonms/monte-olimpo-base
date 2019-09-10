@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/MMarlonMs/MonteOlimpo/_apis/build/status/mmarlonms.MonteOlimpo)](https://dev.azure.com/MMarlonMs/MonteOlimpo/_build/latest?definitionId=1)
+[![Build Status](https://dev.azure.com/MMarlonMs/MonteOlimpo/_apis/build/status/mmarlonms.monte-olimpo-base-core)](https://dev.azure.com/MMarlonMs/MonteOlimpo/_build/latest?definitionId=1)
 
 ![Logo](https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png)
 
