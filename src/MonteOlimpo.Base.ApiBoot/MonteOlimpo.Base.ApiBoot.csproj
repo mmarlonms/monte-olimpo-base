@@ -11,6 +11,8 @@
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
     <Version>1.0.2</Version>
+    <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
