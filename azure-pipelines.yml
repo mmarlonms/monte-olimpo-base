@@ -25,10 +25,10 @@ variables:
   #ApiBoot
 
   Pack1Version: '1.0.4'
-  Pack1PushToNuget: true
+  Pack1PushToNuget: false
 
-  Pack2PushVersion: '1.0.2'
-  Pack2PushToNuget: false
+  Pack2PushVersion: '1.0.4'
+  Pack2PushToNuget: true
   
   Pack3PushVersion: '1.0.2'
   Pack3PushToNuget: False
