@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/MMarlonMs/MonteOlimpo/_apis/build/status/mmarlonms.MonteOlimpo)](https://dev.azure.com/MMarlonMs/MonteOlimpo/_build/latest?definitionId=1)
+[![Build Status](https://dev.azure.com/MMarlonMs/MonteOlimpo/_apis/build/status/mmarlonms.monte-olimpo-base)](https://dev.azure.com/MMarlonMs/MonteOlimpo/_build/latest?definitionId=1)
 
 ![Logo](https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png)
 
@@ -16,7 +16,6 @@ Suite de serviços para desenvolvimentos de API's baseados em uma arquitetura ex
 |*MonteOlimpo.Base.Log*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Log)](https://www.nuget.org/packages/MonteOlimpo.Base.Log)|
 |*MonteOlimpo.Base.ExceptionHandler*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ExceptionHandler)](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler)|
 |*MonteOlimpo.Base.Extensions*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Extensions)](https://www.nuget.org/packages/MonteOlimpo.Base.Extensions)|
-|*MonteOlimpo.Base.Exception*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Exception)](https://www.nuget.org/packages/MonteOlimpo.Base.Exception)|
 |*MonteOlimpo.Base.Swagger*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Swagger)](https://www.nuget.org/packages/MonteOlimpo.Base.Swagger)|
 |*MonteOlimpo.Base.ApiBoot*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ApiBoot)](https://www.nuget.org/packages/MonteOlimpo.Base.ApiBoot)|
 
