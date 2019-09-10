@@ -21,19 +21,19 @@ variables:
   #Filters
   #Log  
   #Extensions.Configuration
-  #Swagger
+  #Swagger1
   #ApiBoot
 
   Pack1Version: '1.0.4'
   Pack1PushToNuget: false
 
-  Pack2PushVersion: '1.0.4'
-  Pack2PushToNuget: true
+  Pack2Version: '1.0.4'
+  Pack2PushToNuget: false
   
-  Pack3PushVersion: '1.0.2'
-  Pack3PushToNuget: False
+  Pack3Version: '1.0.4'
+  Pack3PushToNuget: true
 
-  Pack4PushVersion: '1.0.2'
+  Pack4Version: '1.0.2'
   Pack4PushToNuget: false
 
 

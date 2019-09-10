@@ -6,6 +6,11 @@
     <FileVersion>1.0.0.2</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.0.2</Version>
+    <Copyright>Marlon Miranda da Silva</Copyright>
+    <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
