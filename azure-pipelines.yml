@@ -28,10 +28,10 @@ variables:
   Pack1PushToNuget: false
 
   Pack2Version: '1.0.4'
-  Pack2PushToNuget: true
+  Pack2PushToNuget: false
   
   Pack3Version: '1.0.4'
-  Pack3PushToNuget: false
+  Pack3PushToNuget: true
 
   Pack4Version: '1.0.2'
   Pack4PushToNuget: false
