@@ -2,7 +2,7 @@
 
 ![Logo](https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png)
 
-# MonteOlimpo - [Projeto em Desenvolvimento]
+# Monte Olimpo - Base Core [Projeto em Desenvolvimento]
 Base de negócio para aplicaçoes MonteOlimpo.
 
 
