@@ -23,8 +23,8 @@ variables:
   #Extensions.Configuration
   #Swagger
   #ApiBoot
-  Pack1Version: '1.0.2'
-  Pack1PushToNuget: false
+  Pack1Version: '1.0.3'
+  Pack1PushToNuget: true
 
   Pack2PushVersion: '1.0.2'
   Pack2PushToNuget: false

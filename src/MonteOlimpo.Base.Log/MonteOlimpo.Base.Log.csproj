@@ -8,6 +8,8 @@
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
     <Version>1.0.2</Version>
+    <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

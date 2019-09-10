@@ -10,6 +10,8 @@
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
     <Description>Pacote de Extensoes , Configuration, Service entre outras.</Description>
+    <PackageIconUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageIconUrl>
+    <PackageProjectUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
