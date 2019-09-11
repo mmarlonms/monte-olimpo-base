@@ -33,7 +33,7 @@ variables:
   Pack3Version: '1.0.4'
   Pack3PushToNuget: false
 
-  Pack4Version: '1.0.4'
+  Pack4Version: '1.0.5'
   Pack4PushToNuget: true
 
 
