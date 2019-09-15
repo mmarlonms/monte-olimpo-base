@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace MonteOlimpo.Base.CoreException
 {
+    [Serializable]
     public abstract class CoreException : Exception
     {
         public abstract string Key { get; }
@@ -22,6 +23,7 @@ namespace MonteOlimpo.Base.CoreException
         }
     }
 
+    [Serializable]
     public abstract class CoreException<T> : CoreException
         where T : CoreError
     {
