@@ -3,7 +3,7 @@
 ![Logo](https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png)
 
 
-# MonteOlimpo - [Projeto em Desenvolvimento]
+# MonteOlimpo 
 Suite de serviços para desenvolvimentos de API's baseados em uma arquitetura exagonal.
 
 O intúito desse projeto é facilitar na criação de apis fornecendo uma configuração padrão. 
