@@ -12,7 +12,7 @@ namespace MonteOlimpo.Base.Extensions.Configuration
     {
         public static void AddMonteOlimpoConfiguration(WebHostBuilderContext context, IConfigurationBuilder builder)
         {
-            var configuration = builder.Build();
+            builder.Build();
 
             builder.SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)

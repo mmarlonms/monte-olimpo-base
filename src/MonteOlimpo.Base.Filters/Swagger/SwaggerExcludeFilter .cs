@@ -14,31 +14,31 @@ namespace MonteOlimpo.Base.Filters.Swagger
                 .Select(p => p.Name)
         );
 
-        public void Apply(Schema model, SchemaFilterContext context)
+        public void Apply(Schema schema, SchemaFilterContext context)
         {
-            if (context.SystemType != null && model.Properties != null && model.Properties.Count > 0)
+            if (context.SystemType != null && schema.Properties != null && schema.Properties.Count > 0)
             {
                 if (typeof(Exception).IsAssignableFrom(context.SystemType))
                 {
                     foreach (var ignoreProperty in ignoreProperties)
                     {
-                        var keyCheck = model.Properties
+                        var keyCheck = schema.Properties
                             .Keys.Where(k => k.ToLowerInvariant() == ignoreProperty.ToLowerInvariant());
 
                         if (keyCheck.Any() && keyCheck.Count() == 1)
                         {
-                            model.Properties.Remove(keyCheck.Single());
+                            schema.Properties.Remove(keyCheck.Single());
                         }
                     }
                 }
                 else if (typeof(InternalError).IsAssignableFrom(context.SystemType))
                 {
-                    var keyCheck = model.Properties
+                    var keyCheck = schema.Properties
                         .Keys.Where(k => k.ToLowerInvariant() == nameof(InternalError.Exception).ToLowerInvariant());
 
                     if (keyCheck.Any() && keyCheck.Count() == 1)
                     {
-                        model.Properties.Remove(keyCheck.Single());
+                        schema.Properties.Remove(keyCheck.Single());
                     }
                 }
             }

@@ -14,7 +14,7 @@ namespace Microsoft.AspNetCore.Builder
                 .ApplicationServices.GetService(typeof(IApiVersionDescriptionProvider));
 
             if (apiVersionDescriptionProvider == null)
-                throw new ArgumentNullException(nameof(apiVersionDescriptionProvider));
+                throw new ArgumentException(nameof(apiVersionDescriptionProvider));
 
             applicationBuilder.UseApiVersioning();
             applicationBuilder.UseSwagger();

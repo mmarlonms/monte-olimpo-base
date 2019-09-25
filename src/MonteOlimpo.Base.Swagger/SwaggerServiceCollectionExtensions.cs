@@ -26,10 +26,10 @@ namespace Microsoft.Extensions.DependencyInjection
             var apiMetaData = configuration.GetSection(nameof(SwaggerConfiguration)).TryGet<SwaggerConfiguration>();
 
             if (apiMetaData is null)
-                throw new ArgumentNullException(nameof(apiMetaData));
+                throw new ArgumentException(nameof(apiMetaData));
 
             if (string.IsNullOrWhiteSpace(xmlCommentsFilePath))
-                throw new ArgumentNullException(nameof(xmlCommentsFilePath));
+                throw new ArgumentException(nameof(xmlCommentsFilePath));
 
             services.AddVersionedApiExplorer(
                options =>
