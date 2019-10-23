@@ -52,6 +52,9 @@ namespace MonteOlimpo.Base.ApiBoot
             app.UseMonteOlimpoSwagger();
         }
 
-        protected abstract IEnumerable<Assembly> GetAditionalAssemblies();
+        protected virtual IEnumerable<Assembly> GetAditionalAssemblies()
+        {
+            yield return typeof(MonteOlimpoBootStrap).Assembly;
+        }
     }
 }
