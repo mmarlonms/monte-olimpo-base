@@ -34,7 +34,7 @@ variables:
   Pack3PushToNuget: false
 
   Pack4Version: '1.0.5'
-  Pack4PushToNuget: true
+  Pack4PushToNuget: false
 
 
 steps:
