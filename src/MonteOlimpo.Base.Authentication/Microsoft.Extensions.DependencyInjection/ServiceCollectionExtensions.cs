@@ -29,7 +29,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             // Ativa o uso do token como forma de autorizar o acesso
             // a recursos deste projeto
-            services.AddAuthorizationCore(auth =>
+            services.AddAuthorization(auth =>
             {
                 auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)

@@ -4,18 +4,19 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Copyright>Marlon Miranda da Silva</Copyright>
     <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
     <RepositoryType>Git</RepositoryType>
-    <RepositoryUrl>https://github.com/mmarlonms/MonteOlimpo</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>

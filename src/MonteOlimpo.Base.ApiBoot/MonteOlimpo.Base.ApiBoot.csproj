@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
-    <Version>1.0.8</Version>
+    <Version>1.0.9</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
   </PropertyGroup>
@@ -23,7 +23,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.6" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
     <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="1.0.4" />
     <PackageReference Include="MonteOlimpo.Base.Extensions" Version="1.0.4" />
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.4" />
