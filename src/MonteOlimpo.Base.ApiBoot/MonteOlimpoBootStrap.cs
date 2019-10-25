@@ -24,7 +24,17 @@ namespace MonteOlimpo.Base.ApiBoot
 
         public virtual void ConfigureServices(IServiceCollection services)
         {
-          
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ExceptionFilter>();
+                options.Filters.Add<ValidatorActionFilter>();
+            })
+          .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            .ConfigureApiBehaviorOptions(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            })
+          .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblies(this.GetValidationAssemblies()));
 
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMonteOlimpoLogging(Configuration);
