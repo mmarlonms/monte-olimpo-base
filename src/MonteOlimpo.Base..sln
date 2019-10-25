@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Extensions
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Swagger", "MonteOlimpo.Base.Swagger\MonteOlimpo.Base.Swagger.csproj", "{3425D7D1-7707-4E2E-AE56-9608498A4550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteOlimpo.Base.Authentication", "MonteOlimpo.Base.Authentication\MonteOlimpo.Base.Authentication.csproj", "{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Authentication", "MonteOlimpo.Base.Authentication\MonteOlimpo.Base.Authentication.csproj", "{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteOlimpo.Base.ValidationHandler", "MonteOlimpo.Base.ValidationHandler\MonteOlimpo.Base.ValidationHandler.csproj", "{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteOlimpo.Base.ValidationHandler.Abstractions", "MonteOlimpo.Base.ValidationHandler.Abstractions\MonteOlimpo.Base.ValidationHandler.Abstractions.csproj", "{263A31CB-D73C-4165-A0E4-3E1ED493919F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,14 @@ Global
 		{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +91,8 @@ Global
 		{FC95889E-51F7-487F-BDFA-88CEF6D8F429} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 		{3425D7D1-7707-4E2E-AE56-9608498A4550} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 		{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
+		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
+		{263A31CB-D73C-4165-A0E4-3E1ED493919F} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD4DB511-98D8-46E1-907B-CBE09DA039C5}

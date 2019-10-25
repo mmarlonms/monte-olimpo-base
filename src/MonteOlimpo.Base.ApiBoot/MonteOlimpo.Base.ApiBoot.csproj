@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
@@ -29,6 +30,11 @@
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.4" />
     <PackageReference Include="MonteOlimpo.Base.Log" Version="1.0.4" />
     <PackageReference Include="MonteOlimpo.Base.Swagger" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MonteOlimpo.Base.Filters\MonteOlimpo.Base.Filters.csproj" />
+    <ProjectReference Include="..\MonteOlimpo.Base.ValidationHandler\MonteOlimpo.Base.ValidationHandler.csproj" />
   </ItemGroup>
 
 </Project>
