@@ -56,7 +56,8 @@ Com isso garantimos maior segurança.
 		* [MonteOlimpo.Base.Extensions/](https://www.nuget.org/packages/MonteOlimpo.Base.Extensions/)
 		* [MonteOlimpo.Base.Filters/](https://www.nuget.org/packages/MonteOlimpo.Base.Filters/)	
 		*  [MonteOlimpo.Base.Log/](https://www.nuget.org/packages/MonteOlimpo.Base.Log/)
-		* [MonteOlimpo.Base.ExceptionHandler/](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler/)	
+		* [MonteOlimpo.Base.ExceptionHandler/](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler/)
+		* [MonteOlimpo.Base.ValidationHandler/](https://www.nuget.org/packages/MonteOlimpo.Base.ValidationHandler/)
 		*  [MonteOlimpo.Base.Swagger/](https://www.nuget.org/packages/MonteOlimpo.Base.Swagger/)
 
 
