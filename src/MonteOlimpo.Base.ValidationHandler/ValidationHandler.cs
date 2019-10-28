@@ -21,16 +21,16 @@ namespace MonteOlimpo.Base.ValidationHandler
         {
             _logger.LogInformation("Ouve uma invalidação de uma model");
 
-            var erros = new List<ModelValidationError>();
+            var errors = new List<ModelValidationError>();
             foreach (var errorKey in filterContext.ModelState.Keys)
             {
                 foreach (var error in filterContext.ModelState[errorKey].Errors)
                 {
-                    erros.Add(new ModelValidationError(errorKey, error.ErrorMessage));
+                    errors.Add(new ModelValidationError(errorKey, error.ErrorMessage));
                 }
             }
 
-            var result = new ObjectResult(new { Erros = erros })
+            var result = new ObjectResult(new { Errors = errors })
             {
                 StatusCode = 420
             };
