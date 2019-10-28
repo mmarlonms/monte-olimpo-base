@@ -39,7 +39,17 @@ Com isso garantimos maior segurança.
 	* Referências:
 		* [MonteOlimpo.Base.CoreException/](https://www.nuget.org/packages/MonteOlimpo.Base.CoreException/)
 		* [MonteOlimpo.Base.ExceptionHandler.Abstractions/](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler.Abstractions/)
-		
+
+* __MonteOlimpo.Base.ValidationHandler.Abstractions__
+	*	Apresenta Interface para o Handle de Validations.
+* __MonteOlimpo.Base.ValidationHandler__	
+	* Apresenta uma implementação do Handle de Action voltados para tratamento de validações de models utilizando [Fluent Validation](https://www.carlrippon.com/fluentvalidation-in-an-asp-net-core-web-api/). Caso haja algum erro no model de entrada é lançado um erro do tipo 420 que é serializado e retornado para o solicitante. Com isso basta implementar implementar as regras em uma classe que herde de AbstractValidator<T> e apontar o assemblie no método __GetValidationAssemblies()__ do __Startup__ da __ApiBoot__
+	* Referências:
+		* [MonteOlimpo.Base.CoreException/](https://www.nuget.org/packages/MonteOlimpo.Base.CoreException/)
+		* [MonteOlimpo.Base.ExceptionHandler.Abstractions/](https://www.nuget.org/packages/MonteOlimpo.Base.ValidationHandler.Abstractions/)
+	* Referências Externas:
+		* [Fluent Validation in an ASP.NET Core Web API](https://www.carlrippon.com/fluentvalidation-in-an-asp-net-core-web-api/)
+	
 * __MonteOlimpo.Base.ApiBoot__
 	* Apresenta a configuração base das aplicações MonteOlimpo. Através da classe MonteOlimpoBootStrap é possível utilizar toda a configuração dos pacotes acima, realizando a herança do Startup para a mesma.
 	* Referências: 
@@ -48,6 +58,8 @@ Com isso garantimos maior segurança.
 		*  [MonteOlimpo.Base.Log/](https://www.nuget.org/packages/MonteOlimpo.Base.Log/)
 		* [MonteOlimpo.Base.ExceptionHandler/](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler/)	
 		*  [MonteOlimpo.Base.Swagger/](https://www.nuget.org/packages/MonteOlimpo.Base.Swagger/)
+
+
 
 Exemplo ([monte-olimpo](https://github.com/mmarlonms/monte-olimpo))
 
@@ -90,6 +102,8 @@ Dessa forma temos uma startup enxuta tendo maior tempo desenvolvimento das regra
 |*MonteOlimpo.Base.ExceptionHandler*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ExceptionHandler)](https://www.nuget.org/packages/MonteOlimpo.Base.ExceptionHandler)|
 |*MonteOlimpo.Base.Extensions*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Extensions)](https://www.nuget.org/packages/MonteOlimpo.Base.Extensions)|
 |*MonteOlimpo.Base.Swagger*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.Swagger)](https://www.nuget.org/packages/MonteOlimpo.Base.Swagger)|
+|*MonteOlimpo.Base.ValidationHandler.Abstractions*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ValidationHandler.Abstractions)](https://www.nuget.org/packages/MonteOlimpo.Base.ValidationHandler.Abstractions)|
+|*MonteOlimpo.Base.ValidationHandler*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ValidationHandler)](https://www.nuget.org/packagesMonteOlimpo.Base.ValidationHandler)|
 |*MonteOlimpo.Base.ApiBoot*|[![NuGet Version and Downloads count](https://buildstats.info/nuget/MonteOlimpo.Base.ApiBoot)](https://www.nuget.org/packages/MonteOlimpo.Base.ApiBoot)|
 
 
