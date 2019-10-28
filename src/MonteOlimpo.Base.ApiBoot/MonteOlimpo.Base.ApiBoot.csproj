@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
-    <Version>1.0.10</Version>
+    <Version>1.0.11</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
   </PropertyGroup>
@@ -30,7 +30,7 @@
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.5" />
     <PackageReference Include="MonteOlimpo.Base.Log" Version="1.0.4" />
     <PackageReference Include="MonteOlimpo.Base.Swagger" Version="1.0.4" />
-    <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="1.0.1" />
+    <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
