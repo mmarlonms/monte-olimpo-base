@@ -1,36 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>Marlon Miranda da Silva</Copyright>
     <RepositoryUrl>https://github.com/mmarlonms/MonteOlimpo</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <AssemblyVersion>2.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
-    <Version>1.0.11</Version>
+    <Version>2.0.11</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageIcon>monteolimpo-logo.png</PackageIcon>
+    <PackageTags>2.1</PackageTags>
+    <PackageReleaseNotes>.net standart 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.6" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-    <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="1.0.4" />
-    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="1.0.4" />
-    <PackageReference Include="MonteOlimpo.Base.Filters" Version="1.0.5" />
-    <PackageReference Include="MonteOlimpo.Base.Log" Version="1.0.4" />
-    <PackageReference Include="MonteOlimpo.Base.Swagger" Version="1.0.4" />
-    <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
+    <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="2.0.2" />
+    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="2.0.3" />
+    <PackageReference Include="MonteOlimpo.Base.Filters" Version="2.0.5" />
+    <PackageReference Include="MonteOlimpo.Base.Log" Version="2.0.2" />
+    <PackageReference Include="MonteOlimpo.Base.Swagger" Version="2.0.2" />
+    <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\monteolimpo-logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

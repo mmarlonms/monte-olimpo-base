@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.OpenApi.Models;
 using MonteOlimpo.Base.Crosscutting.Swagger;
 using MonteOlimpo.Base.Extensions.Configuration;
 using MonteOlimpo.Base.Filters.Swagger;
@@ -48,20 +49,15 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSwaggerGen(
                     options =>
                     {
-                        options.AddSecurityDefinition(
-                           "Bearer",
-                           new ApiKeyScheme()
-                           {
-                               In = "header",
-                               Description = "Please enter your JWT with the prefix Bearer into the field below.",
-                               Name = "Authorization",
-                               Type = "apiKey"
-                           });
-
-                        options.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>>
-                            {
-                                { "Bearer", Enumerable.Empty<string>() }
-                            });
+                        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                        {
+                            Description =
+        "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
+                            Name = "Authorization",
+                            In = ParameterLocation.Header,
+                            Type = SecuritySchemeType.ApiKey,
+                            Scheme = "Bearer"
+                        });
 
                         var apiVersionDescriptionProvider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
 
@@ -69,7 +65,6 @@ namespace Microsoft.Extensions.DependencyInjection
                         .OrderBy(a => a.ApiVersion.MajorVersion).ThenBy(a => a.ApiVersion.MinorVersion))
                             options.SwaggerDoc(description.GroupName, CreateSwaggerInfoForApiVersion(description, apiMetaData));
 
-                        options.DescribeAllEnumsAsStrings();
                         options.SchemaFilter<SwaggerExcludeFilter>();
                         options.OperationFilter<SwaggerDefaultValues>();
                         options.IncludeXmlComments(xmlCommentsFilePath);
@@ -78,9 +73,9 @@ namespace Microsoft.Extensions.DependencyInjection
             return services;
         }
 
-        private static Info CreateSwaggerInfoForApiVersion(ApiVersionDescription description, SwaggerConfiguration  swaggerConfiguration)
+        private static OpenApiInfo CreateSwaggerInfoForApiVersion(ApiVersionDescription description, SwaggerConfiguration  swaggerConfiguration)
         {
-            var info = new Info()
+            var info = new OpenApiInfo()
             {
                 Title = swaggerConfiguration.Name,
                 Description = swaggerConfiguration.Description,

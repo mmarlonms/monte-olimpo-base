@@ -1,5 +1,5 @@
-﻿using MonteOlimpo.Base.CoreException;
-using Swashbuckle.AspNetCore.Swagger;
+﻿using Microsoft.OpenApi.Models;
+using MonteOlimpo.Base.CoreException;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
@@ -14,11 +14,11 @@ namespace MonteOlimpo.Base.Filters.Swagger
                 .Select(p => p.Name)
         );
 
-        public void Apply(Schema schema, SchemaFilterContext context)
+        public void Apply(OpenApiSchema schema, SchemaFilterContext context)
         {
-            if (context.SystemType != null && schema.Properties != null && schema.Properties.Count > 0)
+            if (context.Type != null && schema.Properties != null && schema.Properties.Count > 0)
             {
-                if (typeof(Exception).IsAssignableFrom(context.SystemType))
+                if (typeof(Exception).IsAssignableFrom(context.Type))
                 {
                     foreach (var ignoreProperty in ignoreProperties)
                     {
@@ -31,7 +31,7 @@ namespace MonteOlimpo.Base.Filters.Swagger
                         }
                     }
                 }
-                else if (typeof(InternalError).IsAssignableFrom(context.SystemType))
+                else if (typeof(InternalError).IsAssignableFrom(context.Type))
                 {
                     var keyCheck = schema.Properties
                         .Keys.Where(k => k.ToLowerInvariant() == nameof(InternalError.Exception).ToLowerInvariant());
