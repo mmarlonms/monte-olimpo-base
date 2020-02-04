@@ -10,6 +10,7 @@ using MonteOlimpo.Base.Filters.Validation;
 using System.Collections.Generic;
 using System.Reflection;
 
+
 namespace MonteOlimpo.Base.ApiBoot
 {
     public abstract class MonteOlimpoBootStrap
@@ -28,8 +29,9 @@ namespace MonteOlimpo.Base.ApiBoot
             {
                 options.Filters.Add<ExceptionFilter>();
                 options.Filters.Add<ValidatorActionFilter>();
+                options.EnableEndpointRouting = false;
             })
-          .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+          .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
             .ConfigureApiBehaviorOptions(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
@@ -44,9 +46,9 @@ namespace MonteOlimpo.Base.ApiBoot
             services.RegisterAllTypes(GetAditionalAssemblies());
         }
 
-        public virtual void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.EnvironmentName.Equals("Development"))
             {
                 app.UseDeveloperExceptionPage();
             }
