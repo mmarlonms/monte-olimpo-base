@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>2.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <PackageIcon>monteolimpo-logo.png</PackageIcon>
