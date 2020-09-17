@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,17 +10,18 @@ namespace MonteOlimpo.Base.Extensions.Configuration
 {
     public static class ConfigurationExtensions
     {
-        public static void AddMonteOlimpoConfiguration(WebHostBuilderContext context, IConfigurationBuilder builder)
+        public static IHostBuilder AddMonteOlimpoConfiguration(this IHostBuilder builder)
         {
-            builder.Build();
+            var config = new ConfigurationBuilder();
 
-            builder.SetBasePath(Directory.GetCurrentDirectory())
+            config.SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile("serilogsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true)
-                .AddJsonFile($"serilogsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true)
                 .AddEnvironmentVariables()
                 .Build();
+
+
+            return builder;
         }
 
         /// <summary>

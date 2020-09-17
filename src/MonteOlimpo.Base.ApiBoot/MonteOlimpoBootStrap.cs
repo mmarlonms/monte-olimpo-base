@@ -39,7 +39,6 @@ namespace MonteOlimpo.Base.ApiBoot
           .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblies(this.GetValidationAssemblies()));
 
             services.AddRouting(options => options.LowercaseUrls = true);
-            services.AddMonteOlimpoLogging(Configuration);
             services.AddExceptionHandling();
             services.AddValidationHandling();
             services.AddMonteOlimpoSwagger(Configuration);

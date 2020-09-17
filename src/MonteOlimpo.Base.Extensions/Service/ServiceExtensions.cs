@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -23,10 +22,7 @@ namespace MonteOlimpo.Base.Extensions.Service
 
         private static bool DefineTypeToIoC(string type)
         {
-            if (type.EndsWith("Service") || type.EndsWith("Repository") || type.EndsWith("Adapter"))
-                return true;
-
-            return false;
+            return type.EndsWith("Service") || type.EndsWith("Repository") || type.EndsWith("Adapter");
         }
     }
 }
