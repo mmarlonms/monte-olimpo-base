@@ -4,9 +4,9 @@
 
 
 # MonteOlimpo 
-Suite de serviços para desenvolvimentos de API's baseados em uma arquitetura exagonal.
+Suite de serviços para desenvolvimentos de API's baseados em uma arquitetura hexagonal.
 
-O intúito desse projeto é facilitar na criação de apis fornecendo uma configuração padrão. 
+O intuito desse projeto é facilitar na criação de apis fornecendo uma configuração padrão. 
 
 Monte Olimpo Base fornece uma suite de pacotes voltadas para questões de infra estrtura e serviços básicos como Ioc de logs, tratamento de exceções e swagger por exempo.
 
