@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MonteOlimpo.Base.Authentication;
 using System;
@@ -9,52 +9,42 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddJWTAuthentication(this IServiceCollection services, TokenConfigurations tokenConfigurations)
+        public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton(tokenConfigurations);
+            JwtConfiguration jwtConfiguration = configuration.TryGet<JwtConfiguration>();
+            services.AddSingleton(jwtConfiguration ?? throw new ArgumentNullException(nameof(JwtConfiguration)));
 
-            services.AddAuthentication(authOptions =>
-            {
-                authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(bearerOptions =>
-            {
-                var paramsValidation = bearerOptions.TokenValidationParameters;
-                paramsValidation.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret));
-                paramsValidation.ValidIssuer = tokenConfigurations.Issuer;
-                paramsValidation.ValidateIssuerSigningKey = true;
-                paramsValidation.ValidateLifetime = true;
-                paramsValidation.ClockSkew = TimeSpan.Zero;
-            });
+            var validIssuer = Guid.TryParse(jwtConfiguration.Issuer, out var guidIssuer)
+                ? guidIssuer.ToString()
+                : jwtConfiguration.Issuer;
 
-            // Ativa o uso do token como forma de autorizar o acesso
-            // a recursos deste projeto
-            services.AddAuthorization(auth =>
-            {
-                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
-                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
-                    .RequireAuthenticatedUser().Build());
-            });
+            var validAudience = Guid.TryParse(jwtConfiguration.Audience, out var guidAudience)
+                ? guidAudience.ToString()
+                : jwtConfiguration.Audience;
 
-            return services;
-        }
+            services
+                .AddAuthentication(authOptions =>
+                {
+                    authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(bearerOptions =>
+                {
+                    bearerOptions.RequireHttpsMetadata = false;
+                    bearerOptions.SaveToken = true;
+                    bearerOptions.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = !string.IsNullOrWhiteSpace(validAudience),
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
 
-        public static IServiceCollection AddJWTAuthenticationClient(this IServiceCollection services, TokenConfigurations tokenConfigurations)
-        {
-            services.AddAuthentication(authOptions =>
-            {
-                authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(bearerOptions =>
-            {
-                var paramsValidation = bearerOptions.TokenValidationParameters;
-                paramsValidation.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret));
-                paramsValidation.ValidAudience = tokenConfigurations.Audience;
-                paramsValidation.ValidIssuer = tokenConfigurations.Issuer;
-                paramsValidation.ValidateIssuerSigningKey = true;
-                paramsValidation.ValidateLifetime = true;
-                paramsValidation.ClockSkew = TimeSpan.Zero;
-            });
+                        ValidIssuer = validIssuer,
+                        ValidAudience = validAudience,
+
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.Secret)),
+                    };
+                });
 
             return services;
         }

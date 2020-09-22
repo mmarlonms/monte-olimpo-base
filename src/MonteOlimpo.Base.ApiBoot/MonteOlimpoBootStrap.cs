@@ -36,7 +36,7 @@ namespace MonteOlimpo.Base.ApiBoot
             {
                 options.SuppressModelStateInvalidFilter = true;
             })
-          .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblies(this.GetValidationAssemblies()));
+          .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<MonteOlimpoBootStrap>());
 
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddExceptionHandling();

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}"
 EndProject
@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Swagger", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Authentication", "MonteOlimpo.Base.Authentication\MonteOlimpo.Base.Authentication.csproj", "{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteOlimpo.Base.ValidationHandler", "MonteOlimpo.Base.ValidationHandler\MonteOlimpo.Base.ValidationHandler.csproj", "{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.ValidationHandler", "MonteOlimpo.Base.ValidationHandler\MonteOlimpo.Base.ValidationHandler.csproj", "{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteOlimpo.Base.ValidationHandler.Abstractions", "MonteOlimpo.Base.ValidationHandler.Abstractions\MonteOlimpo.Base.ValidationHandler.Abstractions.csproj", "{263A31CB-D73C-4165-A0E4-3E1ED493919F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.ValidationHandler.Abstractions", "MonteOlimpo.Base.ValidationHandler.Abstractions\MonteOlimpo.Base.ValidationHandler.Abstractions.csproj", "{263A31CB-D73C-4165-A0E4-3E1ED493919F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonteOlimpo.Base.Identity.Abstractions", "MonteOlimpo.Base.Identity.Abstractions\MonteOlimpo.Base.Identity.Abstractions.csproj", "{CB4ABC69-AA01-4802-8B19-A700079A0F25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{263A31CB-D73C-4165-A0E4-3E1ED493919F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB4ABC69-AA01-4802-8B19-A700079A0F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB4ABC69-AA01-4802-8B19-A700079A0F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB4ABC69-AA01-4802-8B19-A700079A0F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB4ABC69-AA01-4802-8B19-A700079A0F25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{3980A7E5-3C05-4DA9-B7D9-2D417C6918FB} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 		{1975B61A-D083-40B2-85A1-8AF6FAEBF2FD} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 		{263A31CB-D73C-4165-A0E4-3E1ED493919F} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
+		{CB4ABC69-AA01-4802-8B19-A700079A0F25} = {3B04BC0B-06F5-43FB-A10C-BAE5D68239C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD4DB511-98D8-46E1-907B-CBE09DA039C5}

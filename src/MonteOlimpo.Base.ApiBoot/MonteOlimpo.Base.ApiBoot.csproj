@@ -8,9 +8,9 @@
     <RepositoryType>Git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>2.0.0.3</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
-    <Version>3.0.3</Version>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <FileVersion>4.0.0.0</FileVersion>
+    <Version>4.0.0</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <PackageIcon>monteolimpo-logo.png</PackageIcon>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
@@ -27,10 +27,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
     <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="2.0.2" />
-    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="2.0.3" />
+    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="3.0.0" />
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="2.0.5" />
     <PackageReference Include="MonteOlimpo.Base.Swagger" Version="2.0.2" />
     <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="2.0.1" />
