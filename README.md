@@ -1,3 +1,4 @@
+
 [![Build Status](https://dev.azure.com/MMarlonMs/MonteOlimpo/_apis/build/status/mmarlonms.monte-olimpo-base)](https://dev.azure.com/MMarlonMs/MonteOlimpo/_build/latest?definitionId=1)
 
 ![Logo](https://raw.githubusercontent.com/mmarlonms/monte-olimpo-base/master/docs/monteolimpo-logo.png)
@@ -18,7 +19,24 @@ Monte Olimpo Base fornece uma suite de pacotes voltadas para questões de infra 
 
 * ___MonteOlimpo.Base.Log___
 	* Apresenta o método de extensão __AddMonteOlimpoLogging__ que realiza a configuração do Serillog em uma aplicação .net core com base em um arquivo __serilogsettings.json__ ( Obs.: A aplicação deve reconhecer o arquivo com serilogsettings.json como arquivo de configuração, o pacote _**MonteOlimpo.Base.Extensions**_ possui implementação para isso ).
+	
+	Para configurar o log corretamente o aquivo serilogsettings.json deve possir a seguinte configuração: 
+	
 
+      "LogConfiguration": {
+        "EnableLog": true,
+        "EnableLogConsole": true,
+        "EnableLogElasticSearch": true
+      }
+    Caso tenha habilitado o **LogElasticSearch**  é necessário configurar as informações do elastic seach, informando dados como o indice que será utilizado e local do host, neste exemplo foi utilizado a configuração do 
+[Monte Olimpo Auth Server](https://github.com/mmarlonms/monte-olimpo-auth-server)
+
+      "ElasticConfiguration": {
+          "UseAuthentication": false,
+           "UrlHost": "http://localhost:9200",
+	       "IndexName": "monteolimpo-auth-server"
+      }
+	
 * ___MonteOlimpo.Base.CoreException___
 	*	Apresenta as classes Base para tratamento de erros de negócio e validação de Models.
 	*	Referências Externas: 
