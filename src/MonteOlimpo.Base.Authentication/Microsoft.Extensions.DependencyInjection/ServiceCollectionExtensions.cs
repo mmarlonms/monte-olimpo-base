@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MonteOlimpo.Base.Authentication;
+using MonteOlimpo.Base.Extensions.Configuration;
 using System;
 using System.Text;
 

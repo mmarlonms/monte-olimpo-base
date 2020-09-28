@@ -8,13 +8,13 @@
     <PackageIconUrl></PackageIconUrl>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
-    <Version>4.0.0</Version>
+    <Version>4.0.1</Version>
     <PackageIcon>monteolimpo-logo.png</PackageIcon>
     <PackageTags>3.1</PackageTags>
     <PackageReleaseNotes>.net core 3.1</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
+    <AssemblyVersion>4.0.0.1</AssemblyVersion>
+    <FileVersion>4.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

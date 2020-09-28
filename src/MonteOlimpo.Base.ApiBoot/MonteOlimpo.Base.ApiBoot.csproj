@@ -8,9 +8,9 @@
     <RepositoryType>Git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
-    <Version>4.0.0</Version>
+    <AssemblyVersion>4.0.0.1</AssemblyVersion>
+    <FileVersion>4.0.0.1</FileVersion>
+    <Version>4.0.1</Version>
     <PackageProjectUrl>https://github.com/mmarlonms/MonteOlimpo</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <PackageIcon>monteolimpo-logo.png</PackageIcon>
@@ -32,7 +32,7 @@
     <PackageReference Include="MonteOlimpo.Base.ExceptionHandler" Version="2.0.2" />
     <PackageReference Include="MonteOlimpo.Base.Extensions" Version="3.0.0" />
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="2.0.5" />
-    <PackageReference Include="MonteOlimpo.Base.Swagger" Version="2.0.2" />
+    <PackageReference Include="MonteOlimpo.Base.Swagger" Version="4.0.1" />
     <PackageReference Include="MonteOlimpo.Base.ValidationHandler" Version="2.0.1" />
   </ItemGroup>
 

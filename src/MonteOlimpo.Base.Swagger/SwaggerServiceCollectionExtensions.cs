@@ -1,16 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
 using MonteOlimpo.Base.Crosscutting.Swagger;
 using MonteOlimpo.Base.Extensions.Configuration;
-using MonteOlimpo.Base.Filters.Swagger;
-using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -32,48 +29,46 @@ namespace Microsoft.Extensions.DependencyInjection
             if (string.IsNullOrWhiteSpace(xmlCommentsFilePath))
                 throw new ArgumentException(nameof(xmlCommentsFilePath));
 
-            services.AddVersionedApiExplorer(
-               options =>
-               {
-                   options.GroupNameFormat = "'v'VVV";
-                   options.SubstituteApiVersionInUrl = true;
-               });
-
-            services.AddApiVersioning(options =>
+            services.AddSwaggerGen(c =>
             {
-                options.ReportApiVersions = true;
-                options.AssumeDefaultVersionWhenUnspecified = true;
-                options.DefaultApiVersion = ApiVersion.Parse(apiMetaData.DefaultVersion);
-            });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = apiMetaData.Name, Description = apiMetaData.Description, Version = "v1" });
 
-            services.AddSwaggerGen(
-                    options =>
+                c.DescribeAllEnumsAsStrings();
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description =
+                    "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
                     {
-                        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                        new OpenApiSecurityScheme
                         {
-                            Description =
-        "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
-                            Name = "Authorization",
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
                             In = ParameterLocation.Header,
-                            Type = SecuritySchemeType.ApiKey,
-                            Scheme = "Bearer"
-                        });
 
-                        var apiVersionDescriptionProvider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
-
-                        foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions.Where(a => !a.IsDeprecated)
-                        .OrderBy(a => a.ApiVersion.MajorVersion).ThenBy(a => a.ApiVersion.MinorVersion))
-                            options.SwaggerDoc(description.GroupName, CreateSwaggerInfoForApiVersion(description, apiMetaData));
-
-                        options.SchemaFilter<SwaggerExcludeFilter>();
-                        options.OperationFilter<SwaggerDefaultValues>();
-                        options.IncludeXmlComments(xmlCommentsFilePath);
-                    });
+                        },
+                        new List<string>()
+                    }
+                });
+            });
 
             return services;
         }
 
-        private static OpenApiInfo CreateSwaggerInfoForApiVersion(ApiVersionDescription description, SwaggerConfiguration  swaggerConfiguration)
+        private static OpenApiInfo CreateSwaggerInfoForApiVersion(ApiVersionDescription description, SwaggerConfiguration swaggerConfiguration)
         {
             var info = new OpenApiInfo()
             {

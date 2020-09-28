@@ -4,7 +4,7 @@ namespace MonteOlimpo.Base.ApiBoot
 {
     [ApiController]
     [Produces("application/json")]
-    [Route("api/v{api-version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public abstract class ApiBaseController : ControllerBase
     {
     }

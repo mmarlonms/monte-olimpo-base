@@ -41,8 +41,8 @@ namespace MonteOlimpo.Base.ApiBoot
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddExceptionHandling();
             services.AddValidationHandling();
-            services.AddMonteOlimpoSwagger(Configuration);
             services.RegisterAllTypes(GetAditionalAssemblies());
+            services.AddMonteOlimpoSwagger(Configuration);
         }
 
         public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)

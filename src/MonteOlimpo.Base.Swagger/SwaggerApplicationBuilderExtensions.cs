@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using System;
+﻿using System;
 
 namespace Microsoft.AspNetCore.Builder
 {
@@ -10,20 +9,11 @@ namespace Microsoft.AspNetCore.Builder
             if (applicationBuilder == null)
                 throw new ArgumentNullException(nameof(applicationBuilder));
 
-            var apiVersionDescriptionProvider = (IApiVersionDescriptionProvider)applicationBuilder
-                .ApplicationServices.GetService(typeof(IApiVersionDescriptionProvider));
-
-            if (apiVersionDescriptionProvider == null)
-                throw new ArgumentException(nameof(apiVersionDescriptionProvider));
-
-            applicationBuilder.UseApiVersioning();
             applicationBuilder.UseSwagger();
             applicationBuilder.UseSwaggerUI(
                 options =>
                 {
-                    options.DefaultModelsExpandDepth(-1);
-                    foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
-                        options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                    options.SwaggerEndpoint($"/swagger/v1/swagger.json","Api");
                 });
 
             return applicationBuilder;

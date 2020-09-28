@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyVersion>2.0.0.2</AssemblyVersion>
-    <FileVersion>2.0.0.2</FileVersion>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>4.0.0.1</AssemblyVersion>
+    <FileVersion>4.0.0.1</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.2</Version>
+    <Version>4.0.1</Version>
     <Copyright>Marlon Miranda da Silva</Copyright>
     <PackageLicenseUrl>https://github.com/mmarlonms/monte-olimpo-base/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/mmarlonms/monte-olimpo-base</PackageProjectUrl>
@@ -13,18 +13,18 @@
     <RepositoryUrl>https://github.com/mmarlonms/monte-olimpo-base</RepositoryUrl>
     <PackageIcon>monteolimpo-logo.png</PackageIcon>
     <RepositoryType>Git</RepositoryType>
-    <PackageReleaseNotes>.net standart 2.1</PackageReleaseNotes>
-    <PackageTags>2.1</PackageTags>
+    <PackageReleaseNotes>netcoreapp3.1</PackageReleaseNotes>
+    <PackageTags>3.1</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
-    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="2.0.3" />
+    <PackageReference Include="MonteOlimpo.Base.Extensions" Version="3.0.0" />
     <PackageReference Include="MonteOlimpo.Base.Filters" Version="2.0.5" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
